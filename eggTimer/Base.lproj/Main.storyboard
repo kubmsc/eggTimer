@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ezY-nW-BFW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaj-Fe-w10">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="197"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-HV-o5M">
+                                                <rect key="frame" x="57" y="83" width="300" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="5Wf-Dp-31m"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Miękko"/>
+                                                    <segment title="Średnio"/>
+                                                    <segment title="Twardo"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="degreeOfCooking:" destination="BYZ-38-t0r" eventType="valueChanged" id="qIl-PP-gtx"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ot3-HV-o5M" firstAttribute="centerY" secondItem="jaj-Fe-w10" secondAttribute="centerY" id="xNI-70-lIw"/>
+                                            <constraint firstItem="ot3-HV-o5M" firstAttribute="centerX" secondItem="jaj-Fe-w10" secondAttribute="centerX" id="xpw-k2-hoi"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-DE-9zT">
+                                        <rect key="frame" x="0.0" y="207" width="414" height="197"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-0q-ktx">
+                                                <rect key="frame" x="119" y="61.666666666666686" width="176" height="74"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aes-0q-ktx" firstAttribute="centerY" secondItem="O0W-DE-9zT" secondAttribute="centerY" id="3w4-ve-ttE"/>
+                                            <constraint firstItem="aes-0q-ktx" firstAttribute="centerX" secondItem="O0W-DE-9zT" secondAttribute="centerX" id="UuN-ql-Spn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhB-Rl-AuX">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="197"/>
+                                        <subviews>
+                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soft_egg" translatesAutoresizingMaskIntoConstraints="NO" id="0hS-oX-F0a">
+                                                <rect key="frame" x="132" y="-1.3333333333333144" width="150" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="DSU-p1-VNP"/>
+                                                    <constraint firstAttribute="height" constant="200" id="f4o-QW-ShB"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0hS-oX-F0a" firstAttribute="centerY" secondItem="RhB-Rl-AuX" secondAttribute="centerY" id="lMb-uW-3Pa"/>
+                                            <constraint firstItem="0hS-oX-F0a" firstAttribute="centerX" secondItem="RhB-Rl-AuX" secondAttribute="centerX" id="rq6-8K-FzH"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJM-Tw-spx">
+                                        <rect key="frame" x="0.0" y="621" width="414" height="197"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdU-RE-3Dd">
+                                                <rect key="frame" x="161.66666666666666" y="48.666666666666636" width="90.666666666666657" height="99.666666666666686"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="play" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" weight="medium"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="countingDownPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxJ-lo-lRG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RdU-RE-3Dd" firstAttribute="centerY" secondItem="mJM-Tw-spx" secondAttribute="centerY" id="Wal-1A-IME"/>
+                                            <constraint firstItem="RdU-RE-3Dd" firstAttribute="centerX" secondItem="mJM-Tw-spx" secondAttribute="centerX" id="ZgO-CI-aMX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ezY-nW-BFW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7JA-8S-Ks1"/>
+                            <constraint firstItem="ezY-nW-BFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U4a-ua-Mgd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ezY-nW-BFW" secondAttribute="bottom" id="cQg-x8-XUG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ezY-nW-BFW" secondAttribute="trailing" id="ccw-qE-BDb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="eggImage" destination="0hS-oX-F0a" id="QHi-cq-eKB"/>
+                        <outlet property="segmentedControl" destination="ot3-HV-o5M" id="6M5-P7-pg1"/>
+                        <outlet property="startButton" destination="RdU-RE-3Dd" id="qqc-Bp-EwJ"/>
+                        <outlet property="timeLabel" destination="aes-0q-ktx" id="Nb2-tR-oXa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="soft_egg" width="287" height="365.33334350585938"/>
+    </resources>
+</document>
